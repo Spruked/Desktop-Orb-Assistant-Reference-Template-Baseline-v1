@@ -1,0 +1,95 @@
+#governance-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999999;
+    font-family: system-ui, sans-serif;
+}
+
+.gov-badge {
+    background: #1a1a1a;
+    color: #00ff88;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.gov-dot {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.gov-panel {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+    min-width: 200px;
+}
+
+.gov-panel.hidden { display: none; }
+
+.gov-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #333;
+}
+
+.gov-doctrines {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+.gov-doctrines span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.doc-emp { background: #3498db; }  /* Empirical - Blue */
+.doc-ske { background: #e74c3c; }  /* Skeptical - Red */
+.doc-str { background: #f39c12; }  /* Structural - Orange */
+.doc-nec { background: #9b59b6; }  /* Necessitarian - Purple */
+
+.governance-warning {
+    border-left: 3px solid #e74c3c !important;
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.governance-uncertain {
+    border-left: 3px solid #f39c12 !important;
+    background: rgba(243, 156, 18, 0.05);
+}
+
+.governance-meta {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #ccc;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+}
